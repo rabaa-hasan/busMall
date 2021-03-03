@@ -2,18 +2,18 @@
 
 'use strict';
 
-var mainEl = document.getElementsByTagName('main')[0];
-var sectionEl = document.createElement('section');
+let mainEl = document.getElementsByTagName('main')[0];
+let sectionEl = document.createElement('section');
 mainEl.appendChild(sectionEl);
 // Set up an empty cart for use on this page.
-var cart = new Cart([]);
+let cart = new Cart([]);
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
 
   //TODO: Add an <option> tag inside the form's select for each product
-  var selectElement = document.getElementById('items');
-  for (var i in Product.allProducts) {
+  let selectElement = document.getElementById('items');
+  for (let i in Product.allProducts) {
     let optionEl = document.createElement('option');
     selectElement.appendChild(optionEl);
     optionEl.textContent = Product.allProducts[i].name;
